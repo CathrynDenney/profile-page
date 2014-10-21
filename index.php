@@ -33,9 +33,9 @@
 	</header>
 
 	<div class="main-content">
-		<img src="" />
-
-		<div id="about-cathryn">
+		
+		<div class="section" id="about-cathryn">
+			<img id="cd-photo" src="images/cathryn-sm.png" alt="cathryn's photo" />
 			<p>I'm a Digital Content Editor with Front-end dreams! <a href="www.cathryndenney.com/coursework.html">Working hard</a> for a Masters in Web Design &amp; Content Planning and immersing myself in the world of the web.</p>
 		</div>
 
@@ -79,12 +79,12 @@
 				<h3>On the web you can find me here...</h3>
 
 				<ul>
-					<li>Twitter</li>
-					<li>GitHub</li>
-					<li>Lanyrd</li>
-					<li>LinkedIn</li>
-					<li>email</li>
-					<li>skype</li>
+					<li><a href="https://twitter.com/CathrynDenney">Twitter</a></li>
+					<li><a href="https://github.com/CathrynDenney">GitHub</a></li>
+					<li><a href="http://lanyrd.com/profile/cathryndenney/">Lanyrd</a></li>
+					<li><a href="uk.linkedin.com/in/cathryndenney/">LinkedIn</a></li>
+					<li>denney@live.co.uk</li>
+					<li>cathryn.denney1</li>
 				</ul>
 			</div>
 		</div>

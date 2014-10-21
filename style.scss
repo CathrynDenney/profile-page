@@ -1,0 +1,42 @@
+@import 'reset';
+@import 'colours';
+
+header{
+	background: url('images/cd-logo-sm.png') no-repeat $main-colour;
+	overflow: hidden;
+
+		h1{
+		color: $contrast-text;
+		text-align: center;	
+		}
+
+		nav{
+		color: $contrast-text;
+		float: right;
+		}
+}
+
+
+
+.main-content{
+	padding: 8%;
+}
+
+.section{
+	margin-bottom: 10%;
+
+	h2{
+		border-top: 2px solid $main-colour;
+		border-bottom: 2px solid $main-colour;
+		text-align: center;
+	}
+
+}
+
+.main-content{
+
+	#cd-photo{
+		display: block;
+		margin: 0px auto;
+	}
+}
