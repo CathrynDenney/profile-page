@@ -17,26 +17,170 @@ header{
 }
 
 
-
 .main-content{
-	padding: 8%;
+	padding: 3% 8%;
+	text-align: center;
+	max-width: 960px;
 }
 
 .section{
-	margin-bottom: 10%;
+	margin-bottom: 5%;
 
-	h2{
-		border-top: 2px solid $main-colour;
-		border-bottom: 2px solid $main-colour;
-		text-align: center;
+
+
+	img{
+		display: block;
+		margin: 5% auto;
 	}
 
 }
 
-.main-content{
+#skills{
+
+	ul{
+		width: 90%;
+		margin: auto;
+		overflow: hidden;
+
+		@media screen and (min-width: 480px){
+			width: 95%;
+		}
+
+	}
+
+	li{
+		display: inline-block;
+		width: 35vw; //sized relative to viewport width
+		height: 35vw;	
+		border: 2px solid;
+		font-size: 20vw; //to keep the font size inside box as it expands
+		line-height: 38vw; //this is to vertically align the 
+		text-align: center;
+
+		@media screen and (max-width: 480px){
+			&:nth-child(-n+2){ //select first and second in the list
+				margin-bottom: 4%;
+			}
+
+			&:nth-child(even){
+				float: right;
+			}
+
+			&:nth-child(odd){
+				margin-right: 3%;
+			}
+		}
+			
+		@media screen and (min-width: 481px){
+			width: 17vw; //sized relative to viewport width
+			height: 17vw;
+			font-size: 10vw; //to keep the font size inside box as it expands
+			line-height: 19vw; //this is to vertically align the 
+			margin-left: 2%;
+
+				@media screen and (min-width: 570px){
+					margin-left: 3%;
+				}
+
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+	}
+
+}
+
+
+#about-cathryn{
+	overflow: hidden;
+
+	@media screen and (min-width: 800px){
+		margin-bottom: 0;
+		text-align: left;
+	}
 
 	#cd-photo{
-		display: block;
-		margin: 0px auto;
+	display: block;
+	margin: 0 auto 3%;
+	width: 40%;
+	max-width: 200px;
+
+		@media screen and (min-width: 800px){
+			float: right;
+		}
 	}
+
+	p{
+		background-color: lighten($main-colour, 35%);
+		padding: 5%;
+
+		@media screen and (min-width: 800px){
+			width: 55%;
+		}
+	}
+
+}
+
+@media screen and (min-width: 600px){
+		#contact{
+		clear: both;
+		overflow: hidden;
+	}
+
+	.location{
+		float: left;
+			@media screen and (min-width: 650px){
+				margin-left: 5%;
+			}
+			@media screen and (min-width: 700px){
+				margin-left: 10%;
+			}
+
+	}
+
+	.online-links{
+		float: right;
+			@media screen and (min-width: 650px){
+				margin-right: 5%;
+			}
+			@media screen and (min-width: 700px){
+				margin-right: 10%;
+			}
+
+	}
+}
+
+
+@media screen and (min-width: 700px){
+
+	#supporting-info{
+		float: left;
+		width: 48%;
+	}
+	#blog{
+		float: right;
+		width: 48%;
+	}
+
+
+}
+
+
+
+h2{
+	border-top: 2px solid $main-colour;
+	border-bottom: 2px solid $main-colour;
+	text-align: center;
+	margin-bottom:  5%;
+	padding: 5px 0;
+}
+
+h3{
+	margin-bottom: 3%;
+}
+
+footer{
+	background-color: $main-colour;
+	padding: 4% 2%;
+	clear: left;
 }

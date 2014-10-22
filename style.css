@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+header {
+  background: url("images/cd-logo-sm.png") no-repeat #919291;
+  overflow: hidden; }
+  header h1 {
+    color: #FFF;
+    text-align: center; }
+  header nav {
+    color: #FFF;
+    float: right; }
+
+.main-content {
+  padding: 3% 8%;
+  text-align: center;
+  max-width: 960px; }
+
+.section {
+  margin-bottom: 5%; }
+  .section img {
+    display: block;
+    margin: 5% auto; }
+
+#skills ul {
+  width: 90%;
+  margin: auto;
+  overflow: hidden; }
+  @media screen and (min-width: 480px) {
+    #skills ul {
+      width: 95%; } }
+#skills li {
+  display: inline-block;
+  width: 35vw;
+  height: 35vw;
+  border: 2px solid;
+  font-size: 20vw;
+  line-height: 38vw;
+  text-align: center; }
+  @media screen and (max-width: 480px) {
+    #skills li:nth-child(-n+2) {
+      margin-bottom: 4%; }
+    #skills li:nth-child(even) {
+      float: right; }
+    #skills li:nth-child(odd) {
+      margin-right: 3%; } }
+  @media screen and (min-width: 481px) {
+    #skills li {
+      width: 17vw;
+      height: 17vw;
+      font-size: 10vw;
+      line-height: 19vw;
+      margin-left: 2%; } }
+  @media screen and (min-width: 481px) and (min-width: 570px) {
+    #skills li {
+      margin-left: 3%; } }
+  @media screen and (min-width: 481px) {
+      #skills li:first-child {
+        margin-left: 0; } }
+
+#about-cathryn {
+  overflow: hidden; }
+  @media screen and (min-width: 800px) {
+    #about-cathryn {
+      margin-bottom: 0;
+      text-align: left; } }
+  #about-cathryn #cd-photo {
+    display: block;
+    margin: 0 auto 3%;
+    width: 40%;
+    max-width: 200px; }
+    @media screen and (min-width: 800px) {
+      #about-cathryn #cd-photo {
+        float: right; } }
+  #about-cathryn p {
+    background-color: #ebebeb;
+    padding: 5%; }
+    @media screen and (min-width: 800px) {
+      #about-cathryn p {
+        width: 55%; } }
+
+@media screen and (min-width: 600px) {
+  #contact {
+    clear: both;
+    overflow: hidden; }
+
+  .location {
+    float: left; } }
+  @media screen and (min-width: 600px) and (min-width: 650px) {
+    .location {
+      margin-left: 5%; } }
+  @media screen and (min-width: 600px) and (min-width: 700px) {
+    .location {
+      margin-left: 10%; } }
+
+@media screen and (min-width: 600px) {
+  .online-links {
+    float: right; } }
+  @media screen and (min-width: 600px) and (min-width: 650px) {
+    .online-links {
+      margin-right: 5%; } }
+  @media screen and (min-width: 600px) and (min-width: 700px) {
+    .online-links {
+      margin-right: 10%; } }
+
+@media screen and (min-width: 700px) {
+  #supporting-info {
+    float: left;
+    width: 48%; }
+
+  #blog {
+    float: right;
+    width: 48%; } }
+h2 {
+  border-top: 2px solid #919291;
+  border-bottom: 2px solid #919291;
+  text-align: center;
+  margin-bottom: 5%;
+  padding: 5px 0; }
+
+h3 {
+  margin-bottom: 3%; }
+
+footer {
+  background-color: #919291;
+  padding: 4% 2%;
+  clear: left; }
+
+/*# sourceMappingURL=style.css.map */

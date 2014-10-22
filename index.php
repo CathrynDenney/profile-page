@@ -42,10 +42,10 @@
 		<div class="section" id="skills">
 			<h2>Things I like to do</h2>
 				<ul>
-					<li>Code</li>
-					<li>Design</li>
-					<li>Content</li>
-					<li>Drink tea</li>
+					<li>&lt;&#47;&gt;</li>
+					<li>D</li>
+					<li> &#9776;</li>
+					<li>T</li>
 				</ul>
 		</div>
 
@@ -63,6 +63,7 @@
 
 		<div class="section" id="blog">
 			<h2>Blog</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 
 		</div>
 
@@ -71,11 +72,16 @@
 
 			<div class="location">
 				<h3>Physically you can find me here...</h3>
-		
-		
-				<p>London, UK</p>
+				
+				<figure>
+					<img src="images/londonmap-sm.png" />
+					<figcaption>London, UK</figcaption>
+				</figure>
+
 			</div>
+
 			<div class="online-links">
+
 				<h3>On the web you can find me here...</h3>
 
 				<ul>
@@ -87,6 +93,7 @@
 					<li>cathryn.denney1</li>
 				</ul>
 			</div>
+			
 		</div>
 	</div>
 
