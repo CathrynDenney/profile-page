@@ -12,6 +12,7 @@
 
 	<link rel="icon" href="" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.css" rel="stylesheet" />
 
 	<!-- web fonts -->
 
@@ -42,22 +43,25 @@
 		<div class="section" id="skills">
 			<h2>Things I like to do</h2>
 				<ul>
-					<li>&lt;&#47;&gt;</li>
-					<li>D</li>
-					<li> &#9776;</li>
-					<li>T</li>
+					<li id="code"><i class="fa fa-code"></i></li>
+					<li id="design"><i class="fa fa-paint-brush"></i></li>
+					<li id="content"><i class="fa fa-keyboard-o"></i></li>
+					<li id="coffee"><i class="fa fa-coffee"></i></li>
 				</ul>
 		</div>
 
 		<div class="section" id="supporting-info">
 			<h2>How I like to do them</h2>
 				<ul>
-					<li>HTML</li>
-					<li>CSS/Sass</li>
-					<li>jQuery</li>
+					<li>HTML5</li>
+					<li>CSS3 / Sass</li>
+					<li>Javascript / jQuery</li>
 					<li>Git &amp; GitHub</li>
 					<li>RWD</li>
-					<li>Photoshop/Illustrator</li>
+					<li>SEO</li>
+					<li>Copyediting</li>
+					<li>Photoshop &amp; Illustrator</li>
+					<li>Early Grey / Flat White</li>
 				</ul>
 		</div>
 
@@ -74,7 +78,7 @@
 				<h3>Physically you can find me here...</h3>
 				
 				<figure>
-					<img src="images/londonmap-sm.png" />
+					<img src="images/londonmap.png" />
 					<figcaption>London, UK</figcaption>
 				</figure>
 
