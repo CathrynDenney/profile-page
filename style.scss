@@ -1,261 +1,410 @@
+/* ========== BASE RULES ========== */
+
+
+@import 'reset';
+/* end of reset */
+
+/* imports */
+
 @import 'reset';
 @import 'colours';
+@import 'typography';
 
+/* end imports */
 
-
+body{
+	background-color: $contrast-color; /*Snook suggests setting this in case a user defines their own background as something other than white*/
+	line-height: 1.4rem;
+}
 
 a{
-	color: saturate($main-colour, 20%);
+	color: saturate($main-color, 20%);
 	text-decoration: none;
 
-		&:hover{
-			color: $background-color;
-			
-		}
+	&:hover{
+		color: $highlight-color;
+	}
 }
-
 
 header{
-	background: url('images/cd-logo-sm.png') no-repeat $main-colour;
-	overflow: hidden;
-
-
-		@media screen and (min-width: 800px){
-			background: url('images/cd-logo.png') no-repeat $main-colour;
-		}
-
-		h1{
-		color: $contrast-text;
-		text-align: center;	
-		}
-
-		nav{
-		color: $contrast-text;
-		float: right;
-		}
+	background-color: $main-color;
 }
 
+h1{
+	color: $contrast-color;
+	font:{
+		size: 1.6em;
+		family: $logo-font;
+	}
+	line-height: 1.6em;
+}
+
+h2{
+	border-top: 2px solid $main-color;
+	border-bottom: 2px solid $main-color;
+	margin-bottom:  5%;
+	padding: 8px 0;
+	font:{
+		family: $sans;
+		size: 1rem;
+	}
+
+	@media screen and (min-width: 900px){
+		font-size: 1.5rem;
+	}
+}
+
+h3{
+	margin-bottom: 2%;
+}
+
+h3, p, li{
+	font:{
+		size: 1.1rem;	
+		family: $serif;
+	}
+		
+	@media screen and (min-width: 900px){
+		line-height: 1.6em;
+		font-size: 1.2rem;
+	}
+}	
+
+footer{
+	background-color: $main-color;
+	padding: 4% 2%;
+	clear: left;
+	color: $contrast-color;
+	font-family: $sans;
+
+	@media screen and (min-width: 800px){
+		padding: 2%;
+	}
+}
+
+
+/* ========== LAYOUT RULES ========== */
+
+/* Box model layout rules - border box */
+html {							
+	box-sizing: border-box;
+}
+*, *:before, *:after {			
+	box-sizing: inherit;
+}
+/* End box model */
+
+/* Clearfix for floats*/
+.group-cf:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+/* End clearfix */
+
+header{
+	margin-bottom: 5%;
+}
+
+/* logo layout styles*/
+.logo{
+	float: left;
+	width: 100%;
+	padding: 0.5%;
+	text-align: center;
+
+	@media screen and (min-width: 600px){
+		width: 55%;
+		text-align: left;
+		margin-left: 3%;
+		font-size: 1rem;
+	}
+
+	@media screen and (min-width: 900px){
+		font-size: 1.2rem;
+	}
+	
+	h1{
+		position: relative;
+	}
+}
+/* end */
+
+nav{
+	float: right;
+	li{
+		text-transform: uppercase;
+	}
+
+	a{
+		font-family: $sans;
+	}
+}
 
 .main-content{
-	padding: 3% 8%;
-	margin: 0 auto;
-	text-align: center;
+	width: 80%;
 	max-width: 960px;
-	line-height: 1.4em;
+	margin: auto;
+	text-align: center;
 }
 
-.section{
+.section, .sub-section{
 	margin-bottom: 5%;
-
-
-
-	img{
-		display: block;
-		margin: 5% auto;
-	}
-
 }
 
-#skills{
+figure img{
+	width: 100%;
+}
 
-	ul{
-		width: 90%;
-		margin: auto;
-		overflow: hidden;
+/* Media query layouts */
 
-		@media screen and (min-width: 480px){
-			width: 95%;
-		}
-
+@media screen and (min-width: 1000px){ //Bringing 'how i like to do them' and 'blog' next to each other
+	#supporting-info{
+		width: 48%;
+		float: left;
 	}
+
+	#blog{
+		width: 48%;
+		float: right;
+	}
+
+	#contact{
+		clear: left;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.location{
+		width: 48%;
+		float: left;
+	}
+
+	.online-links{
+		width: 48%;
+		float: right;
+	}
+}
+/* ========== MODULE RULES ========== */
+
+/* RESPONSIVE NAVIGATION MODULE STYLES*/
+
+#menu {
+display:none; //Hide nav options at lowever screen sizes
+	@media screen and (min-width: 680px){
+		display: block; //Reveal full nav after 680px
+		width: 100%;
+		li{
+			display: inline-block;
+		}
+	}
+}
+	
+.slicknav_menu {
+	display:block;
+	width: 100%;
+	position: absolute;
+
+	a{
+		display: block;
+		clear: right;
+		color: $contrast-color;
+	}
+
+	@media screen and (min-width: 680px){ //Hide the slicknav about 600px
+		display: none;
+	}
+}
+
+.slicknav_btn{
+	float: right;
+	margin-right: 3%;
+	line-height: 2.5rem;
+}
+
+.slicknav_nav{
+	clear: both;
+	text-align: center;
 
 	li{
-		background: lighten($background-color, 35%);
-		display: inline-block;
-		width: 35vw; //sized relative to viewport width
-		height: 35vw;
-		max-width: 207px;
-		max-height: 207px;	
-		border: 2px solid lighten($background-color, 35%);
-		font-size: 20vw; //to keep the font size inside box as it expands
-		line-height: 36vw; //this is to vertically align the 
-		text-align: center;
+		background-color: $main-color;
+		border-bottom: 2px solid $highlight-color;
+		&:first-child{
+			border-top: 2px solid $highlight-color;
+		}
+		a{
+			padding: 4%; //give a bit more room on mobile screens
+		}
+	}
 
-		@media screen and (max-width: 479px){
-			&:nth-child(-n+2){ //select first and second in the list
+	a:hover{
+		background-color: $contrast-color;
+		color: $main-color;
+	}
+}
+/*-- END responsive nav styles -->
+
+/*--full width nav styles--*/
+@media screen and (min-width: 680px){
+	#menu a{
+			display: block;
+			text-align: center;
+			padding: 15px;
+			color: $contrast-color;
+			&:hover{
+				background-color: lighten($main-color, 5%);
+				color: $contrast-color;
+			}
+	}
+}
+
+/* RESPONSIVE BOXES MODULE using vw */
+
+#skills li{
+	width: 33.5vw; //this is essentially 33.5% of the width of the viewport 
+	height: 33.5vw;
+	background: lighten($background-color, 35%);
+	display: inline-block;
+	& i{
+	font-size: 12.5vw;
+	line-height: 23.5vw; //centers the icon font in the box
+	}
+		@media screen and (max-width: 766px){
+			&:nth-child(-n+2){ //select first and second in the list to create a margin between top and bottom boxes
 				margin-bottom: 4%;
 			}
-
-			&:nth-child(even){
-				float: right;
-			}
-
-			&:nth-child(odd){
+			&:nth-child(odd){ //select the two boxes on the left and add a right margin
 				margin-right: 3%;
 			}
 		}
-			
-		@media screen and (min-width: 480px){
-			width: 17vw; //sized relative to viewport width
-			height: 17vw;
-			font-size: 10vw; //to keep the font size inside box as it expands
-			line-height: 17vw; //this is to vertically align the 
-			margin-left: 2%;
 
-
-			&:first-child{
-				margin-left: 0;
-			}
-		}
-
-		@media screen and (min-width: 1219px){
-			font-size: 7.5rem;
-			line-height: 13rem;
-		}
-
-	
-
+	span{
+		display: block; //moves text below image
 	}
-
 }
 
-//Refactor!!!
-	li:hover i{
-		display: none;
+@media screen and (min-width: 767px){ //boxes get too big past this breakpoint, so I've made them smaller
+	#skills li{
+		width: 16.75vw;
+		height: 16.75vw;
+		margin: 1%;
+
+		& i{
+			font-size: 6.25vw;
+			line-height: 11.75vw;
+		}
 	}
+}
 
-
-	#code:hover:after{
-		content: 'code';
-		font-size: 6vw;
-		color: $main-colour;
-
+@media screen and (min-width: 1000px){
+	#skills li{
+		width: 14.75vw;
+		height: 14.75vw;
+		max-width: 217px;
+		max-height: 217px;
+		& i{
+			font-size: 4.25vw;
+			line-height: 9.75vw;
+		}
 	}
+}
 
-	#design:hover:after{
-		content:'design';
-		font-size: 5vw;
-		color: $main-colour;
-	}
+/* -- END of responsive boxes styling--*/
 
-	#content:hover:after{
-		content: 'content';
-		font-size: 5vw;
-		color: $main-colour;
-	}
-
-	#coffee:hover:after{
-		content: 'drink';
-		font-size: 5vw;
-		color: $main-colour;
-	}
-//Refactor!!
+/* -- ABOUT ME SECTION MODULE -- */
 
 #about-cathryn{
-	overflow: hidden;
-	width: 95%;
-	margin: 4% auto;
+	width: 100%;
+}
+#about-cathryn p{
+	background-color: lighten($background-color, 35%);
+	padding: 5%;
+	margin-top: 2%;
 
-	@media screen and (min-width: 800px){
-		margin-bottom: 0;
+	& i{
+		font-size: 1.8rem;
+		padding: 2% 2% 0;
+		@media screen and (min-width: 800px){
+			padding: 3% 2% 0 0;
+		}
+	}
+
+	@media screen and (min-width: 800px){//float the p and img next to each other
+		float: left;
+		width: 70%;
+		margin-top: 0;
 		text-align: left;
 	}
 
-	#cd-photo{
-	display: block;
+	@media screen and (min-width: 900px){
+		width: 70%;
+		padding: 3%;
+	}
+
+	@media screen and (min-width: 1046px){//Trying to get it to align vertically next to p
+		padding: 4%;
+	}
+}
+
+#cd-photo{
 	margin: 0 auto 3%;
-	width: 40%;
-	max-width: 200px;
+	width: 60%;
+	max-width: 220px;
 
-		@media screen and (min-width: 800px){
-			float: right;
-		}
-	}
-
-	p{
-		background-color: lighten($background-color, 35%);
-		padding: 5%;
-
-		@media screen and (min-width: 800px){
-			width: 55%;
-		}
-	}
-
-}
-
-#contact{
-	clear: both;
-	overflow: hidden;
-}
-
-.location{
-	@media screen and (max-width: 669px){
-		margin-bottom: 10%;
-	}
-	@media screen and (min-width: 670px){
-		float: left;
-		margin-left: 3%;
-
-	}
 	@media screen and (min-width: 800px){
-		margin-left: 1%;
-		width: 48%;
+		float: right;
+		width: 28%;
+	}
+
+	@media screen and (min-width: 1203px){
+			width: 22%;
+	}
+}
+/* -- END about me --*/
+
+/*-- CONTACT MODULE STYLES --*/
+
+//Phyical location & map
+
+figure{
+	img{
+		width: 100%;
+		max-width: 300px; //Stop the img expanding bigget than it's natural size
 	}
 }
 
 .online-links{
-
-	@media screen and (min-width: 670px){
-		float: right;
-		margin-right: 3%;
-	}
-	@media screen and (min-width: 800px){
-		margin-right: 1%;
-		width: 48%;
-	}
-}
-
-
-
-@media screen and (min-width: 700px){
-
-	#supporting-info{
-		float: left;
-		width: 48%;
-	}
-	#blog{
-		float: right;
-		width: 48%;
+	i{
+		margin-right:  3%;
 	}
 
+	ul{
+		padding: 2%;
 
-}
-
-
-
-h2{
-	border-top: 2px solid $main-colour;
-	border-bottom: 2px solid $main-colour;
-	text-align: center;
-	margin-bottom:  5%;
-	padding: 5px 0;
-}
-
-h3{
-	margin-bottom: 3%;
-}
-
-figure img{
-	width: 70%;
-}
-
-footer{
-	background-color: $main-colour;
-	padding: 4% 2%;
-	clear: left;
-	color: $contrast-text;
-
-		@media screen and (min-width: 665px){
-			padding: 2%;
+		@media screen and (min-width: 800px){
+			width: 90%;
+			margin: auto;
 		}
+		@media screen and (min-width: 1088px){
+			width: 80%;
+		}
+	}
+
+	li{
+		text-align: center;
+		font-size: 0.85rem;
+		padding-bottom: 5%;
+		@media screen and (min-width: 800px){ //I think it looks better aligned left when floated
+			text-align: left;
+			padding-left: 10%;
+		}
+		@media screen and (min-width: 1088px){
+			font-size: 1rem;
+		}
+	}
 }
+
+/*-- END contact module styles --*/
+
+
+/* ========== STATE RULES ========== */

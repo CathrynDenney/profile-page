@@ -1,3 +1,4 @@
+/* ========== BASE RULES ========== */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -45,176 +46,344 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* end of reset */
+/* imports */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* end imports */
+body {
+  background-color: #FFF;
+  /*Snook suggests setting this in case a user defines their own background as something other than white*/
+  line-height: 1.4rem; }
+
 a {
   color: #5555a9;
   text-decoration: none; }
   a:hover {
-    color: #929492; }
+    color: #5eaea6; }
 
 header {
-  background: url("images/cd-logo-sm.png") no-repeat #6E6E90;
-  overflow: hidden; }
-  @media screen and (min-width: 800px) {
-    header {
-      background: url("images/cd-logo.png") no-repeat #6E6E90; } }
-  header h1 {
-    color: #FFF;
-    text-align: center; }
-  header nav {
-    color: #FFF;
-    float: right; }
+  background-color: #6E6E90; }
 
-.main-content {
-  padding: 3% 8%;
-  margin: 0 auto;
-  text-align: center;
-  max-width: 960px;
-  line-height: 1.4em; }
+h1 {
+  color: #FFF;
+  font-size: 1.6em;
+  font-family: "Satisfy", cursive;
+  line-height: 1.6em; }
 
-.section {
-  margin-bottom: 5%; }
-  .section img {
-    display: block;
-    margin: 5% auto; }
-
-#skills ul {
-  width: 90%;
-  margin: auto;
-  overflow: hidden; }
-  @media screen and (min-width: 480px) {
-    #skills ul {
-      width: 95%; } }
-#skills li {
-  background: #ececec;
-  display: inline-block;
-  width: 35vw;
-  height: 35vw;
-  max-width: 207px;
-  max-height: 207px;
-  border: 2px solid #ececec;
-  font-size: 20vw;
-  line-height: 36vw;
-  text-align: center; }
-  @media screen and (max-width: 479px) {
-    #skills li:nth-child(-n+2) {
-      margin-bottom: 4%; }
-    #skills li:nth-child(even) {
-      float: right; }
-    #skills li:nth-child(odd) {
-      margin-right: 3%; } }
-  @media screen and (min-width: 480px) {
-    #skills li {
-      width: 17vw;
-      height: 17vw;
-      font-size: 10vw;
-      line-height: 17vw;
-      margin-left: 2%; }
-      #skills li:first-child {
-        margin-left: 0; } }
-  @media screen and (min-width: 1219px) {
-    #skills li {
-      font-size: 7.5rem;
-      line-height: 13rem; } }
-
-li:hover i {
-  display: none; }
-
-#code:hover:after {
-  content: 'code';
-  font-size: 6vw;
-  color: #6E6E90; }
-
-#design:hover:after {
-  content: 'design';
-  font-size: 5vw;
-  color: #6E6E90; }
-
-#content:hover:after {
-  content: 'content';
-  font-size: 5vw;
-  color: #6E6E90; }
-
-#coffee:hover:after {
-  content: 'drink';
-  font-size: 5vw;
-  color: #6E6E90; }
-
-#about-cathryn {
-  overflow: hidden;
-  width: 95%;
-  margin: 4% auto; }
-  @media screen and (min-width: 800px) {
-    #about-cathryn {
-      margin-bottom: 0;
-      text-align: left; } }
-  #about-cathryn #cd-photo {
-    display: block;
-    margin: 0 auto 3%;
-    width: 40%;
-    max-width: 200px; }
-    @media screen and (min-width: 800px) {
-      #about-cathryn #cd-photo {
-        float: right; } }
-  #about-cathryn p {
-    background-color: #ececec;
-    padding: 5%; }
-    @media screen and (min-width: 800px) {
-      #about-cathryn p {
-        width: 55%; } }
-
-#contact {
-  clear: both;
-  overflow: hidden; }
-
-@media screen and (max-width: 669px) {
-  .location {
-    margin-bottom: 10%; } }
-@media screen and (min-width: 670px) {
-  .location {
-    float: left;
-    margin-left: 3%; } }
-@media screen and (min-width: 800px) {
-  .location {
-    margin-left: 1%;
-    width: 48%; } }
-
-@media screen and (min-width: 670px) {
-  .online-links {
-    float: right;
-    margin-right: 3%; } }
-@media screen and (min-width: 800px) {
-  .online-links {
-    margin-right: 1%;
-    width: 48%; } }
-
-@media screen and (min-width: 700px) {
-  #supporting-info {
-    float: left;
-    width: 48%; }
-
-  #blog {
-    float: right;
-    width: 48%; } }
 h2 {
   border-top: 2px solid #6E6E90;
   border-bottom: 2px solid #6E6E90;
-  text-align: center;
   margin-bottom: 5%;
-  padding: 5px 0; }
+  padding: 8px 0;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 1rem; }
+  @media screen and (min-width: 900px) {
+    h2 {
+      font-size: 1.5rem; } }
 
 h3 {
-  margin-bottom: 3%; }
+  margin-bottom: 2%; }
 
-figure img {
-  width: 70%; }
+h3, p, li {
+  font-size: 1.1rem;
+  font-family: Georgia, Times, "Times New Roman", serif; }
+  @media screen and (min-width: 900px) {
+    h3, p, li {
+      line-height: 1.6em;
+      font-size: 1.2rem; } }
 
 footer {
   background-color: #6E6E90;
   padding: 4% 2%;
   clear: left;
-  color: #FFF; }
-  @media screen and (min-width: 665px) {
+  color: #FFF;
+  font-family: Verdana, Geneva, sans-serif; }
+  @media screen and (min-width: 800px) {
     footer {
       padding: 2%; } }
+
+/* ========== LAYOUT RULES ========== */
+/* Box model layout rules - border box */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* End box model */
+/* Clearfix for floats*/
+.group-cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* End clearfix */
+header {
+  margin-bottom: 5%; }
+
+/* logo layout styles*/
+.logo {
+  float: left;
+  width: 100%;
+  padding: 0.5%;
+  text-align: center; }
+  @media screen and (min-width: 600px) {
+    .logo {
+      width: 55%;
+      text-align: left;
+      margin-left: 3%;
+      font-size: 1rem; } }
+  @media screen and (min-width: 900px) {
+    .logo {
+      font-size: 1.2rem; } }
+  .logo h1 {
+    position: relative; }
+
+/* end */
+nav {
+  float: right; }
+  nav li {
+    text-transform: uppercase; }
+  nav a {
+    font-family: Verdana, Geneva, sans-serif; }
+
+.main-content {
+  width: 80%;
+  max-width: 960px;
+  margin: auto;
+  text-align: center; }
+
+.section, .sub-section {
+  margin-bottom: 5%; }
+
+figure img {
+  width: 100%; }
+
+/* Media query layouts */
+@media screen and (min-width: 1000px) {
+  #supporting-info {
+    width: 48%;
+    float: left; }
+
+  #blog {
+    width: 48%;
+    float: right; }
+
+  #contact {
+    clear: left; } }
+@media screen and (min-width: 800px) {
+  .location {
+    width: 48%;
+    float: left; }
+
+  .online-links {
+    width: 48%;
+    float: right; } }
+/* ========== MODULE RULES ========== */
+/* RESPONSIVE NAVIGATION MODULE STYLES*/
+#menu {
+  display: none; }
+  @media screen and (min-width: 680px) {
+    #menu {
+      display: block;
+      width: 100%; }
+      #menu li {
+        display: inline-block; } }
+
+.slicknav_menu {
+  display: block;
+  width: 100%;
+  position: absolute; }
+  .slicknav_menu a {
+    display: block;
+    clear: right;
+    color: #FFF; }
+  @media screen and (min-width: 680px) {
+    .slicknav_menu {
+      display: none; } }
+
+.slicknav_btn {
+  float: right;
+  margin-right: 3%;
+  line-height: 2.5rem; }
+
+.slicknav_nav {
+  clear: both;
+  text-align: center; }
+  .slicknav_nav li {
+    background-color: #6E6E90;
+    border-bottom: 2px solid #5eaea6; }
+    .slicknav_nav li:first-child {
+      border-top: 2px solid #5eaea6; }
+    .slicknav_nav li a {
+      padding: 4%; }
+  .slicknav_nav a:hover {
+    background-color: #FFF;
+    color: #6E6E90; }
+
+/*-- END responsive nav styles -->
+
+/*--full width nav styles--*/
+@media screen and (min-width: 680px) {
+  #menu a {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    color: #FFF; }
+    #menu a:hover {
+      background-color: #7c7c9b;
+      color: #FFF; } }
+/* RESPONSIVE BOXES MODULE using vw */
+#skills li {
+  width: 33.5vw;
+  height: 33.5vw;
+  background: #ececec;
+  display: inline-block; }
+  #skills li i {
+    font-size: 12.5vw;
+    line-height: 23.5vw; }
+  @media screen and (max-width: 766px) {
+    #skills li:nth-child(-n+2) {
+      margin-bottom: 4%; }
+    #skills li:nth-child(odd) {
+      margin-right: 3%; } }
+  #skills li span {
+    display: block; }
+
+@media screen and (min-width: 767px) {
+  #skills li {
+    width: 16.75vw;
+    height: 16.75vw;
+    margin: 1%; }
+    #skills li i {
+      font-size: 6.25vw;
+      line-height: 11.75vw; } }
+@media screen and (min-width: 1000px) {
+  #skills li {
+    width: 14.75vw;
+    height: 14.75vw;
+    max-width: 217px;
+    max-height: 217px; }
+    #skills li i {
+      font-size: 4.25vw;
+      line-height: 9.75vw; } }
+/* -- END of responsive boxes styling--*/
+/* -- ABOUT ME SECTION MODULE -- */
+#about-cathryn {
+  width: 100%; }
+
+#about-cathryn p {
+  background-color: #ececec;
+  padding: 5%;
+  margin-top: 2%; }
+  #about-cathryn p i {
+    font-size: 1.8rem;
+    padding: 2% 2% 0; }
+    @media screen and (min-width: 800px) {
+      #about-cathryn p i {
+        padding: 3% 2% 0 0; } }
+  @media screen and (min-width: 800px) {
+    #about-cathryn p {
+      float: left;
+      width: 70%;
+      margin-top: 0;
+      text-align: left; } }
+  @media screen and (min-width: 900px) {
+    #about-cathryn p {
+      width: 70%;
+      padding: 3%; } }
+  @media screen and (min-width: 1046px) {
+    #about-cathryn p {
+      padding: 4%; } }
+
+#cd-photo {
+  margin: 0 auto 3%;
+  width: 60%;
+  max-width: 220px; }
+  @media screen and (min-width: 800px) {
+    #cd-photo {
+      float: right;
+      width: 28%; } }
+  @media screen and (min-width: 1203px) {
+    #cd-photo {
+      width: 22%; } }
+
+/* -- END about me --*/
+/*-- CONTACT MODULE STYLES --*/
+figure img {
+  width: 100%;
+  max-width: 300px; }
+
+.online-links i {
+  margin-right: 3%; }
+.online-links ul {
+  padding: 2%; }
+  @media screen and (min-width: 800px) {
+    .online-links ul {
+      width: 90%;
+      margin: auto; } }
+  @media screen and (min-width: 1088px) {
+    .online-links ul {
+      width: 80%; } }
+.online-links li {
+  text-align: center;
+  font-size: 0.85rem;
+  padding-bottom: 5%; }
+  @media screen and (min-width: 800px) {
+    .online-links li {
+      text-align: left;
+      padding-left: 10%; } }
+  @media screen and (min-width: 1088px) {
+    .online-links li {
+      font-size: 1rem; } }
+
+/*-- END contact module styles --*/
+/* ========== STATE RULES ========== */
 
 /*# sourceMappingURL=style.css.map */
