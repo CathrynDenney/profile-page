@@ -132,6 +132,7 @@ header{
 
 nav{
 	float: right;
+	width: 40%;
 	li{
 		text-transform: uppercase;
 	}
@@ -194,8 +195,10 @@ display:none; //Hide nav options at lowever screen sizes
 	@media screen and (min-width: 680px){
 		display: block; //Reveal full nav after 680px
 		width: 100%;
+		float: right;
+		margin-right: 8%;
 		li{
-			display: inline-block;
+			float: right;
 		}
 	}
 }

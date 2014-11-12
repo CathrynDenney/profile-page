@@ -121,7 +121,7 @@ h2 {
   border-bottom: 2px solid #6E6E90;
   margin-bottom: 5%;
   padding: 8px 0;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1rem; }
   @media screen and (min-width: 900px) {
     h2 {
@@ -132,7 +132,7 @@ h3 {
 
 h3, p, li {
   font-size: 1.1rem;
-  font-family: Georgia, Times, "Times New Roman", serif; }
+  font-family: "Merriweather", serif; }
   @media screen and (min-width: 900px) {
     h3, p, li {
       line-height: 1.6em;
@@ -143,7 +143,7 @@ footer {
   padding: 4% 2%;
   clear: left;
   color: #FFF;
-  font-family: Verdana, Geneva, sans-serif; }
+  font-family: "Source Sans Pro", sans-serif; }
   @media screen and (min-width: 800px) {
     footer {
       padding: 2%; } }
@@ -187,11 +187,12 @@ header {
 
 /* end */
 nav {
-  float: right; }
+  float: right;
+  width: 40%; }
   nav li {
     text-transform: uppercase; }
   nav a {
-    font-family: Verdana, Geneva, sans-serif; }
+    font-family: "Source Sans Pro", sans-serif; }
 
 .main-content {
   width: 80%;
@@ -232,9 +233,11 @@ figure img {
   @media screen and (min-width: 680px) {
     #menu {
       display: block;
-      width: 100%; }
+      width: 100%;
+      float: right;
+      margin-right: 8%; }
       #menu li {
-        display: inline-block; } }
+        float: right; } }
 
 .slicknav_menu {
   display: block;
