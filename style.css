@@ -214,6 +214,8 @@ figure img {
   #blog {
     width: 48%;
     float: right; }
+    #blog li {
+      margin-bottom: 10%; }
 
   #contact {
     clear: left; } }

@@ -167,6 +167,9 @@ figure img{
 	#blog{
 		width: 48%;
 		float: right;
+		& li{
+			margin-bottom: 10%;
+		}
 	}
 
 	#contact{
