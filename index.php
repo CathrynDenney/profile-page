@@ -1,4 +1,4 @@
-<?php require('../../blog/wp-blog-header.php');?>
+<?php require('blog/wp-blog-header.php');?>
 
 <!DOCTYPE html>
 
@@ -31,7 +31,7 @@
 <body>
 	<!--Start of header group-->
 	<header class="group-cf">
-		<a class="logo" href="index.php" alt="cd">
+		<a class="logo" href="index.php">
 			<h1>Cathryn Denney</h1>
 		</a>
 		<nav class="group-cf"> <!--Primary navigation-->
@@ -50,17 +50,49 @@
 		<!--About me-->
 		<div class="section group-cf" id="about-cathryn">
 			<img id="cd-photo" src="images/cathryn.png" alt="cathryn's photo" />
-			<p>Hi! I'm Cathryn, a Digital Content Editor with Front-end dreams! Working hard for a <a href="www.cathryndenney.com/coursework.html">MA in Web Design &amp; Content Planning</a> and immersing myself in the world of the web.<br /><a href="https://twitter.com/CathrynDenney"><i class="fa fa-twitter"></i></a> <a href="https://github.com/CathrynDenney"><i class="fa fa-github"></i></a></p>
+			<p>Hi! I'm Cathryn, a Digital Content Editor with Front-end dreams! Working hard for a <a href="http://www.cathryndenney.com/coursework/">MA in Web Design &amp; Content Planning</a> and immersing myself in the world of the web.<br /><a href="https://twitter.com/CathrynDenney"><i class="fa fa-twitter"></i></a> <a href="https://github.com/CathrynDenney"><i class="fa fa-github"></i></a></p>
 		</div>
 
 		<!--Things I like to do...-->
 		<div class="section" id="skills">
-			<h2>Things I like to do&hellip;</h2>
+			<h2>Things I do&hellip;</h2>
 				<ul>
-					<li><i class="fa fa-code"></i><span class="box-text code">Code</span></li>
-					<li><i class="fa fa-paint-brush"></i><span class="box-text design">Design</span></li>
-					<li><i class="fa fa-keyboard-o"></i><span class="box-text content">Content</span></li>
-					<li><i class="fa fa-coffee"></i><span class="box-text coffee">Drink</span></li>
+					<li id="code">
+						<a href="#">
+							<i class="fa fa-code"></i>
+							<div class="box-text">
+								<h3 class="text-main">Code</h3>
+								<h4 class="text-sub">HTML5, CSS3/Sass, Javascript/jQuery</h4>
+							</div>
+						</a>
+					</li>
+					<li id="design">
+						<a href="#">
+							<i class="fa fa-paint-brush"></i>
+							<div class="box-text">
+								<h3 class="text-main">Design</h3>
+								<h4 class="text-sub">RWD, Photoshop, Illustrator</h4>
+							</div>
+						</a>
+					</li>
+					<li id="content">
+						<a href="#">
+							<i class="fa fa-keyboard-o"></i>
+							<div class="box-text">
+								<h3 class="text-main">Content</h3>
+								<h4 class="text-sub">SEO<br /> Copyediting</h4>
+							</div>
+						</a>
+					</li>
+					<li id="coffee">
+						<a href="#">
+							<i class="fa fa-coffee"></i>
+							<div class="box-text">
+								<h3 class="text-main">Drink</h3>
+								<h4 class="text-sub">Flat White<br /> Earl Grey</h4>
+							</div>
+						</a>
+					</li>
 				</ul>
 		</div>
 
